@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheepPrefab: {fileID: 2026991542, guid: 3a9601f96e61a0948a5aed690df4bec0, type: 3}
-  SheepCount: 25
+  SheepCount: 15000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

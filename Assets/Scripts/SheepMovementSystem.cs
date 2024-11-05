@@ -3,6 +3,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public partial struct SheepMovementSystem : ISystem
 {
@@ -21,7 +22,8 @@ public partial struct SheepMovementSystem : ISystem
             transform.ValueRW.Position += move;
             if (transform.ValueRW.Position.z > 50)
             {
-                transform.ValueRW.Position.z = 0;
+                transform.ValueRW.Position.x = Random.Range(-50, 50);
+                transform.ValueRW.Position.z = Random.Range(-50, 50);
             }
         }
     }

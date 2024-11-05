@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3926995483756429250}
   - component: {fileID: 1499970770442318774}
   - component: {fileID: -8306493157959019172}
+  - component: {fileID: 9029180869563298337}
   m_Layer: 0
   m_Name: sheepECS
   m_TagString: Untagged
@@ -99,4 +100,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabaa41bf1ce3a24ea44186d8b9bf4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+--- !u!114 &9029180869563298337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026991542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b6467bcd530cd4d809fae70ea0ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
