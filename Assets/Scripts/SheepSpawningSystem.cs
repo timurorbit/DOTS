@@ -35,8 +35,6 @@ public partial struct SheepSpawningSystem : ISystem
         var sheeps = new NativeArray<Entity>(config.sheepCount, Allocator.Temp);
         ecb.Instantiate(config.sheepPrefab, sheeps);
 
-        EntityManager manager = World.DefaultGameObjectInjectionWorld.EntityManager;
-
         foreach (var sheep in sheeps)
         {
            ecb.SetComponentForLinkedEntityGroup(sheep, queryMask,

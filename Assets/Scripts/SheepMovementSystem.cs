@@ -16,14 +16,13 @@ public partial struct SheepMovementSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        var move = new float3(0, 0, 0.1f);
+        var move = new float3(0, 0.1f, 0);
         foreach (var transform in SystemAPI.Query<RefRW<LocalTransform>>().WithAll<SheepAuthoring.Sheep>())
         {
             transform.ValueRW.Position += move;
-            if (transform.ValueRW.Position.z > 50)
+            if (transform.ValueRW.Position.y > 100)
             {
-                transform.ValueRW.Position.x = Random.Range(-50, 50);
-                transform.ValueRW.Position.z = Random.Range(-50, 50);
+                transform.ValueRW.Position = new float3(Random.Range(-50,50), 0, Random.Range(-50,50));
             }
         }
     }
