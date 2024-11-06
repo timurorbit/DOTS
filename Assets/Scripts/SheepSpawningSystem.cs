@@ -3,8 +3,8 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Rendering;
+using Unity.Transforms;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Random = Unity.Mathematics.Random;
 
 public partial struct SheepSpawningSystem : ISystem
@@ -40,8 +40,9 @@ public partial struct SheepSpawningSystem : ISystem
            ecb.SetComponentForLinkedEntityGroup(sheep, queryMask,
                new URPMaterialPropertyBaseColor { Value = RandomColor(ref random)}
                );
+           float3 newPosition = new float3(random.NextFloat(-50,50),random.NextFloat(0,100),random.NextFloat(-50,50));
+           ecb.SetComponent(sheep, LocalTransform.FromPositionRotationScale(newPosition, Quaternion.identity, 35));
         }
-        
         ecb.Playback(state.EntityManager);
     }
 
